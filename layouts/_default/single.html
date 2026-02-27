@@ -1,0 +1,9 @@
+{{ define "main" }}
+<article id="main">
+  <h1>{{ .Title }}</h1>
+
+  <section>{{ .Content }}</section>
+
+  {{ partial "footer.html" . }}
+</article>
+{{ end }}

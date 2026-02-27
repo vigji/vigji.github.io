@@ -4,6 +4,7 @@
 
 <body>
 
+{{ partial "site-nav.html" . }}
 {{ block "main" . }}{{ end }}
 
 {{ if .Params.math }}

@@ -17,6 +17,12 @@ The beauty of Tufte's layout is its generous margins.{{< sidenote >}}Sidenotes l
 
 The idea is simple: supporting information belongs in the periphery, not in the body text. Footnotes force the reader to bounce to the bottom of the page; sidenotes keep everything in view.
 
+## Figures
+
+The Tufte layout supports figures in the margin and at full width. Here is a regular figure:
+
+{{< figure src="heading-direction.svg" caption="Cumulative heading direction of a larval zebrafish over 10 seconds of free swimming. The monotonic increase suggests a slow, persistent turn." >}}
+
 ## Code
 
 Here is a block of Python, since that is what I write most:

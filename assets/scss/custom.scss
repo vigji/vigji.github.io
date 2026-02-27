@@ -1,35 +1,57 @@
 // ============================================================
 // Custom overrides for vigji.github.io
+// Libertinus Serif (body) + Libertinus Sans (headings/nav/meta)
 // ============================================================
 
-// --- Self-hosted ET Book woff2 fonts with font-display: swap ---
+// --- Font faces ---
 
 @font-face {
-    font-family: "et-book";
-    src: url("/fonts/et-book/etbookot-roman-webfont.woff2") format("woff2"),
-         url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff");
+    font-family: "Libertinus Serif";
+    src: url("/fonts/libertinus/libertinus-serif-regular.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "et-book";
-    src: url("/fonts/et-book/etbookot-italic-webfont.woff2") format("woff2"),
-         url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff");
+    font-family: "Libertinus Serif";
+    src: url("/fonts/libertinus/libertinus-serif-italic.woff2") format("woff2");
     font-weight: normal;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: "et-book";
-    src: url("/fonts/et-book/etbookot-bold-webfont.woff2") format("woff2"),
-         url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff");
+    font-family: "Libertinus Serif";
+    src: url("/fonts/libertinus/libertinus-serif-bold.woff2") format("woff2");
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: "Libertinus Sans";
+    src: url("/fonts/libertinus/libertinus-sans-regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Libertinus Sans";
+    src: url("/fonts/libertinus/libertinus-sans-bold.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+// --- Font stacks ---
+
+$serif: "Libertinus Serif", "Linux Libertine", Palatino, "Palatino Linotype",
+        "Book Antiqua", Georgia, serif;
+$sans:  "Libertinus Sans", "Linux Biolinum", "Gill Sans", "Gill Sans MT",
+        Calibri, sans-serif;
+$mono:  Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 // --- Color palette ---
 
@@ -44,10 +66,45 @@ $rule:        #ccbfb3;
 
 // --- Base overrides ---
 
+html {
+    font-size: 15px;
+}
+
 body {
     background-color: $bg;
+    background-image: url("/dot-field.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 900px 700px;
+    background-attachment: fixed;
     color: $text;
+    font-family: $serif;
+    line-height: 1.5;
 }
+
+// --- Headings: sans-serif ---
+
+h1, h2, h3, h4 {
+    font-family: $sans;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-style: normal;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-style: normal;
+}
+
+// --- Links ---
 
 a, a:link {
     color: $link;
@@ -63,19 +120,34 @@ a:visited {
     color: $link;
 }
 
-// --- Navigation ---
+// --- Site navigation: top-right, all pages ---
 
-nav {
+.site-nav {
+    position: fixed;
+    top: 1.2rem;
+    right: 2rem;
+    z-index: 100;
+
     a {
-        color: $link;
-        margin-right: 1.5rem;
+        font-family: $sans;
+        color: $meta;
+        margin-left: 1.5rem;
         font-variant: small-caps;
         letter-spacing: 0.05em;
-        font-size: 1.1rem;
+        font-size: 0.95rem;
 
         &:hover {
             color: $link-hover;
         }
+    }
+}
+
+// --- Navigation: sans (general) ---
+
+nav {
+    a {
+        font-family: $sans;
+        color: $link;
     }
 }
 
@@ -84,12 +156,14 @@ nav {
 .sidenote,
 .marginnote {
     color: $sidenote;
+    font-family: $serif;
 }
 
 // --- Code blocks ---
 
 pre,
 code {
+    font-family: $mono;
     background-color: $code-bg;
 }
 
@@ -102,7 +176,7 @@ pre {
 code {
     padding: 0.1em 0.3em;
     border-radius: 2px;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 pre code {
@@ -117,38 +191,49 @@ hr {
     border-top: 1px solid $rule;
 }
 
-// --- Metadata (dates, reading time) ---
+// --- Metadata: sans ---
 
 .content-meta,
 .page-date,
+.subtitle,
 time {
+    font-family: $sans;
     color: $meta;
 }
 
 // --- Article typography ---
 
 article {
-    p, li {
-        line-height: 1.6;
+    p {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        font-family: $serif;
+    }
+
+    li {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        font-family: $serif;
     }
 }
 
 // --- Homepage styles ---
 
 .home-bio {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     max-width: 40rem;
-    line-height: 1.6;
+    line-height: 1.55;
 }
 
-.home-nav {
-    margin: 2rem 0;
+.home-links {
+    margin: 1.5rem 0;
 
     a {
+        font-family: $sans;
         font-variant: small-caps;
         letter-spacing: 0.05em;
-        font-size: 1.2rem;
-        margin-right: 2rem;
+        font-size: 0.95rem;
+        margin-right: 1.5rem;
         color: $link;
 
         &:hover {
@@ -161,6 +246,7 @@ article {
     margin-top: 3rem;
 
     h2 {
+        font-family: $sans;
         font-variant: small-caps;
         letter-spacing: 0.05em;
     }
@@ -175,8 +261,9 @@ article {
     }
 
     .post-date {
+        font-family: $sans;
         color: $meta;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         margin-left: 0.5rem;
     }
 }
@@ -192,18 +279,61 @@ article {
     }
 
     .post-title {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .post-date {
+        font-family: $sans;
         color: $meta;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     .post-summary {
         color: $sidenote;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         margin-top: 0.25rem;
+    }
+}
+
+// --- Footer: consistent sans ---
+
+.page-footer {
+    font-family: $sans;
+}
+
+.page-footer-menu {
+    font-family: $sans;
+    font-size: 1rem;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+
+    li {
+        font-family: $sans;
+    }
+
+    a {
+        font-family: $sans;
+        color: $meta;
+
+        &:hover {
+            color: $link-hover;
+        }
+    }
+}
+
+.previous-post,
+.next-post {
+    font-family: $sans;
+    font-size: 1rem;
+
+    a {
+        color: $meta;
+
+        &:hover {
+            color: $link-hover;
+        }
     }
 }
 
@@ -215,14 +345,15 @@ article {
     border-top: 1px solid $rule;
 
     p {
+        font-family: $sans;
         font-variant: small-caps;
         letter-spacing: 0.05em;
         color: $meta;
     }
 
     input[type="email"] {
-        font-family: et-book, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
-        font-size: 1rem;
+        font-family: $sans;
+        font-size: 0.9rem;
         padding: 0.4rem 0.6rem;
         border: 1px solid $rule;
         background: $bg;
@@ -231,8 +362,8 @@ article {
     }
 
     input[type="submit"] {
-        font-family: et-book, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
-        font-size: 1rem;
+        font-family: $sans;
+        font-size: 0.9rem;
         padding: 0.4rem 1rem;
         background: $link;
         color: $bg;

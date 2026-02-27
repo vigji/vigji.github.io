@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" font-family="serif" font-size="12">
+  <rect width="400" height="200" fill="#fffff8"/>
+  <!-- Axes -->
+  <line x1="50" y1="170" x2="370" y2="170" stroke="#111" stroke-width="1"/>
+  <line x1="50" y1="170" x2="50" y2="20" stroke="#111" stroke-width="1"/>
+  <!-- Axis labels -->
+  <text x="210" y="195" text-anchor="middle" fill="#555">Time (s)</text>
+  <text x="15" y="95" text-anchor="middle" fill="#555" transform="rotate(-90 15 95)">Heading (rad)</text>
+  <!-- Simulated heading direction trace -->
+  <polyline fill="none" stroke="#6b4c3b" stroke-width="1.5"
+    points="50,140 60,138 70,130 80,125 90,128 100,120 110,110 120,105 130,108 140,100 150,95 160,88 170,82 180,78 190,80 200,75 210,68 220,60 230,55 240,58 250,52 260,48 270,45 280,50 290,55 300,48 310,42 320,38 330,40 340,35 350,32 360,30 370,28"/>
+  <!-- Tick marks -->
+  <line x1="50" y1="170" x2="50" y2="175" stroke="#111"/>
+  <text x="50" y="185" text-anchor="middle" fill="#555" font-size="10">0</text>
+  <line x1="210" y1="170" x2="210" y2="175" stroke="#111"/>
+  <text x="210" y="185" text-anchor="middle" fill="#555" font-size="10">5</text>
+  <line x1="370" y1="170" x2="370" y2="175" stroke="#111"/>
+  <text x="370" y="185" text-anchor="middle" fill="#555" font-size="10">10</text>
+  <line x1="45" y1="170" x2="50" y2="170" stroke="#111"/>
+  <text x="40" y="174" text-anchor="end" fill="#555" font-size="10">0</text>
+  <line x1="45" y1="95" x2="50" y2="95" stroke="#111"/>
+  <text x="40" y="99" text-anchor="end" fill="#555" font-size="10">π</text>
+  <line x1="45" y1="20" x2="50" y2="20" stroke="#111"/>
+  <text x="40" y="24" text-anchor="end" fill="#555" font-size="10">2π</text>
+</svg>

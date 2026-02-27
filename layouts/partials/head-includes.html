@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <!-- Preload critical fonts -->
-<link rel="preload" href="/fonts/et-book/etbookot-roman-webfont.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/et-book/etbookot-italic-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/libertinus/libertinus-serif-regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/libertinus/libertinus-sans-regular.woff2" as="font" type="font/woff2" crossorigin>
 
 {{ with resources.Get "scss/site.scss" }}
   {{ $opts := (dict "targetPath" "css/site.min.css" "outputStyle" "compressed" "includePaths" (slice "themes/hugo-tufte/assets/scss")) }}
