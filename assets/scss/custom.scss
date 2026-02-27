@@ -1,0 +1,246 @@
+// ============================================================
+// Custom overrides for vigji.github.io
+// ============================================================
+
+// --- Self-hosted ET Book woff2 fonts with font-display: swap ---
+
+@font-face {
+    font-family: "et-book";
+    src: url("/fonts/et-book/etbookot-roman-webfont.woff2") format("woff2"),
+         url("et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("/fonts/et-book/etbookot-italic-webfont.woff2") format("woff2"),
+         url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff");
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "et-book";
+    src: url("/fonts/et-book/etbookot-bold-webfont.woff2") format("woff2"),
+         url("et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+// --- Color palette ---
+
+$bg:          #fffff8;
+$text:        #111111;
+$link:        #6b4c3b;
+$link-hover:  #3d2b1f;
+$meta:        #777777;
+$sidenote:    #555555;
+$code-bg:     #f5f2ed;
+$rule:        #ccbfb3;
+
+// --- Base overrides ---
+
+body {
+    background-color: $bg;
+    color: $text;
+}
+
+a, a:link {
+    color: $link;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $link-hover;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: $link;
+}
+
+// --- Navigation ---
+
+nav {
+    a {
+        color: $link;
+        margin-right: 1.5rem;
+        font-variant: small-caps;
+        letter-spacing: 0.05em;
+        font-size: 1.1rem;
+
+        &:hover {
+            color: $link-hover;
+        }
+    }
+}
+
+// --- Sidenotes and margin notes ---
+
+.sidenote,
+.marginnote {
+    color: $sidenote;
+}
+
+// --- Code blocks ---
+
+pre,
+code {
+    background-color: $code-bg;
+}
+
+pre {
+    padding: 1rem;
+    border-radius: 3px;
+    overflow-x: auto;
+}
+
+code {
+    padding: 0.1em 0.3em;
+    border-radius: 2px;
+    font-size: 0.9em;
+}
+
+pre code {
+    padding: 0;
+    background: none;
+}
+
+// --- Horizontal rules ---
+
+hr {
+    border: 0;
+    border-top: 1px solid $rule;
+}
+
+// --- Metadata (dates, reading time) ---
+
+.content-meta,
+.page-date,
+time {
+    color: $meta;
+}
+
+// --- Article typography ---
+
+article {
+    p, li {
+        line-height: 1.6;
+    }
+}
+
+// --- Homepage styles ---
+
+.home-bio {
+    font-size: 1.2rem;
+    max-width: 40rem;
+    line-height: 1.6;
+}
+
+.home-nav {
+    margin: 2rem 0;
+
+    a {
+        font-variant: small-caps;
+        letter-spacing: 0.05em;
+        font-size: 1.2rem;
+        margin-right: 2rem;
+        color: $link;
+
+        &:hover {
+            color: $link-hover;
+        }
+    }
+}
+
+.recent-posts {
+    margin-top: 3rem;
+
+    h2 {
+        font-variant: small-caps;
+        letter-spacing: 0.05em;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        margin-bottom: 0.5rem;
+    }
+
+    .post-date {
+        color: $meta;
+        font-size: 0.9rem;
+        margin-left: 0.5rem;
+    }
+}
+
+// --- Blog list ---
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+        margin-bottom: 1.5rem;
+    }
+
+    .post-title {
+        font-size: 1.1rem;
+    }
+
+    .post-date {
+        color: $meta;
+        font-size: 0.85rem;
+    }
+
+    .post-summary {
+        color: $sidenote;
+        font-size: 0.95rem;
+        margin-top: 0.25rem;
+    }
+}
+
+// --- Subscribe form ---
+
+.subscribe-form {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid $rule;
+
+    p {
+        font-variant: small-caps;
+        letter-spacing: 0.05em;
+        color: $meta;
+    }
+
+    input[type="email"] {
+        font-family: et-book, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+        font-size: 1rem;
+        padding: 0.4rem 0.6rem;
+        border: 1px solid $rule;
+        background: $bg;
+        width: 16rem;
+        max-width: 100%;
+    }
+
+    input[type="submit"] {
+        font-family: et-book, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+        font-size: 1rem;
+        padding: 0.4rem 1rem;
+        background: $link;
+        color: $bg;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: $link-hover;
+        }
+    }
+}

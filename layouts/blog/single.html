@@ -1,0 +1,15 @@
+{{ define "main" }}
+<article id="main">
+  <h1>{{ .Title }}</h1>
+  <p class="subtitle">
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    · {{ .ReadingTime }} min read
+  </p>
+
+  <section>
+    {{ .Content }}
+  </section>
+
+  {{ partial "footer.html" . }}
+</article>
+{{ end }}

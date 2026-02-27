@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- Preload critical fonts -->
+<link rel="preload" href="/fonts/et-book/etbookot-roman-webfont.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/et-book/etbookot-italic-webfont.woff2" as="font" type="font/woff2" crossorigin>
+
+{{ with resources.Get "scss/site.scss" }}
+  {{ $opts := (dict "targetPath" "css/site.min.css" "outputStyle" "compressed" "includePaths" (slice "themes/hugo-tufte/assets/scss")) }}
+  {{ with . | toCSS $opts }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{ end }}
+{{ end }}
+
+{{/* RSS auto-discovery */}}
+{{ range .AlternativeOutputFormats }}
+<link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ $.Site.Title }}">
+{{ end }}
+
+{{/* GoatCounter analytics — no cookies, GDPR-compliant */}}
+{{/* Replace YOURCODE with your GoatCounter site code after creating an account at https://www.goatcounter.com */}}
+{{ if not hugo.IsServer }}
+<script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+{{ end }}

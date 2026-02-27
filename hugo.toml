@@ -1,0 +1,57 @@
+baseURL = "https://vigji.github.io/"
+languageCode = "en-US"
+title = "Luigi Petrucco"
+theme = "hugo-tufte"
+canonifyurls = true
+paginate = 10
+disableKinds = ["taxonomy", "term"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    guessSyntax = true
+
+[params]
+  subtitle = "Data scientist & AI engineer"
+  codeblocksdark = false
+  marginNoteInd = "⊕"
+  showPoweredBy = false
+  hidedate = false
+  showSummary = true
+  math = false
+  sansSubtitle = false
+  centerArticle = false
+  github = "vigji"
+  mastodon = "mastodon.social/@vigji"
+  google_scholar = "FQDeRWQAAAAJ"
+
+[taxonomies]
+
+[menu]
+  [[menu.nav]]
+    name = "Home"
+    weight = -110
+    identifier = "home"
+    url = "/"
+  [[menu.nav]]
+    name = "Blog"
+    weight = -100
+    identifier = "blog"
+    url = "/blog/"
+  [[menu.nav]]
+    name = "About"
+    weight = -90
+    identifier = "about"
+    url = "/about/"
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.RSS]
+    mediaType = "application/rss+xml"
+    baseName = "feed"

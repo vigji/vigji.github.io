@@ -1,0 +1,33 @@
+<footer class="page-footer">
+<hr />
+
+<div class="previous-post" style="display:inline-block;">
+  {{ with .PrevInSection }}
+  <a class="link-reverse" href="{{ .Permalink }}?ref=footer">« {{ .Title | truncate 50 "..."}}</a>
+  {{ end }}
+</div>
+
+<div class="next-post" style="display:inline-block;float:right;">
+  {{ with .NextInSection }}
+  <a class="link-reverse" href="{{ .Permalink }}?ref=footer">{{ .Title | truncate 50 "..." }} »</a>
+  {{ end }}
+</div>
+
+<ul class="page-footer-menu">
+  {{ if isset .Site.Params "github" }}
+  <li><a href="https://github.com/{{.Site.Params.github}}">GitHub</a></li>
+  {{ end }}
+  {{ if isset .Site.Params "mastodon" }}
+  <li><a href="https://{{.Site.Params.mastodon}}">Mastodon</a></li>
+  {{ end }}
+  {{ if isset .Site.Params "google_scholar" }}
+  <li><a href="https://scholar.google.com/citations?user={{.Site.Params.google_scholar}}">Google Scholar</a></li>
+  {{ end }}
+  {{ range .Site.Menus.footer }}
+    <li><a href="{{.URL}}">{{.Pre }} {{ .Name }}</a></li>
+  {{ end }}
+</ul>
+
+{{ partial "footer-extra.html" . }}
+
+</footer>

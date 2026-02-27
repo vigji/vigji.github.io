@@ -1,0 +1,40 @@
+{{ define "main" }}
+<article id="main" class="home-page">
+  <section>
+    <h1>{{ .Site.Title }}</h1>
+    <p class="subtitle" style="font-variant: small-caps; letter-spacing: 0.05em; color: #777;">
+      {{ .Site.Params.subtitle }}
+    </p>
+
+    {{ with .Content }}
+    <div class="home-bio">
+      {{ . }}
+    </div>
+    {{ end }}
+
+    <nav class="home-nav">
+      <a href="/blog/">Blog</a>
+      <a href="/about/">About &amp; CV</a>
+      <a href="https://github.com/vigji">GitHub</a>
+      <a href="https://scholar.google.com/citations?user=FQDeRWQAAAAJ">Scholar</a>
+    </nav>
+  </section>
+
+  {{ $posts := where .Site.RegularPages "Section" "blog" }}
+  {{ if $posts }}
+  <section class="recent-posts">
+    <h2>Recent writing</h2>
+    <ul>
+      {{ range first 5 $posts }}
+      <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span class="post-date">{{ .Date.Format "January 2006" }}</span>
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
+
+  {{ partial "footer.html" . }}
+</article>
+{{ end }}

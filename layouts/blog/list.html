@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article id="main">
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}
+  <section>{{ . }}</section>
+  {{ end }}
+
+  <section>
+    <ul class="blog-list">
+      {{ range .Pages }}
+      <li>
+        <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
+        <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with .Description }}
+        <p class="post-summary">{{ . }}</p>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>
+
+  {{ partial "footer.html" . }}
+</article>
+{{ end }}
