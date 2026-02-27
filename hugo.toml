@@ -2,7 +2,7 @@ baseURL = "https://vigji.github.io/"
 languageCode = "en-US"
 title = "Luigi Petrucco"
 theme = "hugo-tufte"
-canonifyurls = true
+canonifyurls = false
 paginate = 10
 disableKinds = ["taxonomy", "term"]
 

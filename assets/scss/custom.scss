@@ -72,14 +72,23 @@ html {
 
 body {
     background-color: $bg;
+    color: $text;
+    font-family: $serif;
+    line-height: 1.5;
+}
+
+.dot-field-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 900px;
+    height: 700px;
     background-image: url("/dot-field.svg");
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 900px 700px;
-    background-attachment: fixed;
-    color: $text;
-    font-family: $serif;
-    line-height: 1.5;
+    pointer-events: none;
+    z-index: -1;
 }
 
 // --- Headings: sans-serif ---
@@ -124,9 +133,13 @@ a:visited {
 
 .site-nav {
     position: fixed;
-    top: 1.2rem;
-    right: 2rem;
+    top: 0;
+    right: 0;
     z-index: 100;
+    background: $bg;
+    padding: 0.8rem 2rem 0.8rem 1.5rem;
+    border-bottom-left-radius: 4px;
+    box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.06);
 
     a {
         font-family: $sans;
@@ -199,6 +212,34 @@ hr {
 time {
     font-family: $sans;
     color: $meta;
+}
+
+// --- Post header ---
+
+.post-description {
+    font-family: $serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: $sidenote;
+    margin-top: -0.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.post-meta {
+    font-family: $sans;
+    color: $meta;
+    margin-bottom: 2rem;
+
+    time {
+        font-size: 0.9rem;
+        display: block;
+    }
+
+    .post-reading-time {
+        font-size: 0.8rem;
+        display: block;
+        margin-top: 0.15rem;
+    }
 }
 
 // --- Article typography ---
@@ -373,5 +414,189 @@ article {
         &:hover {
             background: $link-hover;
         }
+    }
+}
+
+// ============================================================
+// Theme toggle button
+// ============================================================
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 1.5rem;
+    padding: 0;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.theme-toggle-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    font-size: 0.95rem;
+    color: $meta;
+
+    &::after {
+        content: "☀";
+    }
+}
+
+// ============================================================
+// Dark mode — applied via .dark class on <html>
+// ============================================================
+
+$dark-bg:        #1c1b1a;
+$dark-text:      #d5d0c8;
+$dark-link:      #c4a882;
+$dark-link-hover:#e2cdb3;
+$dark-meta:      #8a8580;
+$dark-sidenote:  #9a9590;
+$dark-code-bg:   #2a2725;
+$dark-rule:      #3d3832;
+
+html.dark {
+    body {
+        background-color: $dark-bg;
+        color: $dark-text;
+    }
+
+    a, a:link, a:visited {
+        color: $dark-link;
+    }
+
+    a:hover {
+        color: $dark-link-hover;
+    }
+
+    h1, h2, h3, h4 {
+        color: $dark-text;
+    }
+
+    .site-nav {
+        background: $dark-bg;
+        box-shadow: -1px 1px 4px rgba(0, 0, 0, 0.3);
+
+        a {
+            color: $dark-meta;
+
+            &:hover {
+                color: $dark-link-hover;
+            }
+        }
+    }
+
+    .theme-toggle-icon {
+        color: $dark-meta;
+
+        &::after {
+            content: "☽";
+        }
+    }
+
+    .sidenote,
+    .marginnote {
+        color: $dark-sidenote;
+    }
+
+    pre,
+    code {
+        background-color: $dark-code-bg;
+        color: $dark-text;
+    }
+
+    pre code {
+        background: none;
+    }
+
+    hr {
+        border-top-color: $dark-rule;
+    }
+
+    .content-meta,
+    .page-date,
+    .subtitle,
+    time {
+        color: $dark-meta;
+    }
+
+    .post-description {
+        color: $dark-sidenote;
+    }
+
+    .post-meta {
+        color: $dark-meta;
+    }
+
+    .page-footer,
+    .page-footer-menu {
+        a {
+            color: $dark-meta;
+
+            &:hover {
+                color: $dark-link-hover;
+            }
+        }
+    }
+
+    .previous-post a,
+    .next-post a {
+        color: $dark-meta;
+
+        &:hover {
+            color: $dark-link-hover;
+        }
+    }
+
+    .blog-list {
+        .post-date {
+            color: $dark-meta;
+        }
+
+        .post-summary {
+            color: $dark-sidenote;
+        }
+    }
+
+    .recent-posts {
+        .post-date {
+            color: $dark-meta;
+        }
+    }
+
+    .home-links a {
+        color: $dark-link;
+
+        &:hover {
+            color: $dark-link-hover;
+        }
+    }
+
+    .subscribe-form {
+        border-top-color: $dark-rule;
+
+        p {
+            color: $dark-meta;
+        }
+
+        input[type="email"] {
+            border-color: $dark-rule;
+            background: $dark-code-bg;
+            color: $dark-text;
+        }
+
+        input[type="submit"] {
+            background: $dark-link;
+            color: $dark-bg;
+
+            &:hover {
+                background: $dark-link-hover;
+            }
+        }
+    }
+
+    .dot-field-bg {
+        filter: invert(0.85) brightness(0.6);
     }
 }

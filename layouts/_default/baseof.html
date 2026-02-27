@@ -3,7 +3,7 @@
 {{- partial "header.html" . -}}
 
 <body>
-
+<div class="dot-field-bg" aria-hidden="true"></div>
 {{ partial "site-nav.html" . }}
 {{ block "main" . }}{{ end }}
 
@@ -11,6 +11,13 @@
 {{ partial "math.html" . }}
 {{ end }}
 
+<script>
+document.querySelector('.theme-toggle').addEventListener('click', function() {
+  var d = document.documentElement;
+  d.classList.toggle('dark');
+  localStorage.setItem('theme', d.classList.contains('dark') ? 'dark' : 'light');
+});
+</script>
 </body>
 
 </html>
