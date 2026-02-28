@@ -55,7 +55,7 @@ $mono:  Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 // --- Color palette ---
 
-$bg:          #fffff8;
+$bg:          #fdfaf3;
 $text:        #111111;
 $link:        #6b4c3b;
 $link-hover:  #3d2b1f;
@@ -259,6 +259,22 @@ time {
         font-size: 0.8rem;
         display: block;
         margin-top: 0.15rem;
+    }
+}
+
+// --- Article hero image ---
+
+// --- Article hero image ---
+
+figure.hero-img {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    img {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -618,5 +634,9 @@ html.dark {
 
     .dot-field-bg {
         filter: invert(0.85) brightness(0.6);
+    }
+
+    article > figure img {
+        filter: invert(0.85) brightness(0.8);
     }
 }

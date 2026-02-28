@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <!-- Bifurcation diagram / decision tree with fine dots -->
+  <g fill="none" stroke="#8a8078" stroke-width="0.6" stroke-linecap="round">
+    <!-- Main stem -->
+    <path d="M720,30 L720,80" opacity="0.5"/>
+    <!-- First bifurcation -->
+    <path d="M720,80 Q700,100 670,120" opacity="0.48"/>
+    <path d="M720,80 Q740,100 770,120" opacity="0.48"/>
+    <!-- Second bifurcations -->
+    <path d="M670,120 Q650,140 630,165" opacity="0.42"/>
+    <path d="M670,120 Q680,140 690,165" opacity="0.42"/>
+    <path d="M770,120 Q760,140 750,165" opacity="0.42"/>
+    <path d="M770,120 Q790,140 810,165" opacity="0.42"/>
+    <!-- Third bifurcations -->
+    <path d="M630,165 Q618,185 605,210" opacity="0.35"/>
+    <path d="M630,165 Q638,185 645,210" opacity="0.35"/>
+    <path d="M690,165 Q682,185 675,210" opacity="0.35"/>
+    <path d="M690,165 Q700,185 710,210" opacity="0.35"/>
+    <path d="M750,165 Q742,185 735,210" opacity="0.35"/>
+    <path d="M750,165 Q758,185 765,210" opacity="0.35"/>
+    <path d="M810,165 Q802,185 795,210" opacity="0.35"/>
+    <path d="M810,165 Q822,185 835,210" opacity="0.35"/>
+    <!-- Fourth bifurcations (just dots/scatter) -->
+    <path d="M605,210 Q598,230 590,250" opacity="0.25"/>
+    <path d="M605,210 Q610,230 615,250" opacity="0.25"/>
+    <path d="M645,210 Q640,230 635,250" opacity="0.25"/>
+    <path d="M645,210 Q650,230 655,250" opacity="0.25"/>
+    <path d="M675,210 Q670,230 665,250" opacity="0.25"/>
+    <path d="M675,210 Q680,230 685,250" opacity="0.25"/>
+    <path d="M710,210 Q705,230 700,250" opacity="0.25"/>
+    <path d="M710,210 Q715,230 720,250" opacity="0.25"/>
+    <path d="M735,210 Q730,230 725,250" opacity="0.25"/>
+    <path d="M735,210 Q740,230 745,250" opacity="0.25"/>
+    <path d="M765,210 Q760,230 755,250" opacity="0.25"/>
+    <path d="M765,210 Q770,230 775,250" opacity="0.25"/>
+    <path d="M795,210 Q790,230 785,250" opacity="0.25"/>
+    <path d="M795,210 Q800,230 805,250" opacity="0.25"/>
+    <path d="M835,210 Q830,230 825,250" opacity="0.25"/>
+    <path d="M835,210 Q840,230 845,250" opacity="0.25"/>
+  </g>
+  <!-- Terminal scatter of fine dots -->
+  <g fill="#8a8078">
+    <circle cx="720" cy="30" r="2.5" opacity="0.55"/>
+    <circle cx="720" cy="80" r="2" opacity="0.45"/>
+    <circle cx="670" cy="120" r="2" opacity="0.42"/>
+    <circle cx="770" cy="120" r="2" opacity="0.42"/>
+    <!-- Scatter at bottom -->
+    <circle cx="588" cy="255" r="1" opacity="0.18"/>
+    <circle cx="617" cy="252" r="1" opacity="0.18"/>
+    <circle cx="633" cy="255" r="1" opacity="0.18"/>
+    <circle cx="657" cy="253" r="1" opacity="0.18"/>
+    <circle cx="663" cy="252" r="1" opacity="0.18"/>
+    <circle cx="687" cy="255" r="1" opacity="0.18"/>
+    <circle cx="698" cy="253" r="1" opacity="0.18"/>
+    <circle cx="722" cy="252" r="1" opacity="0.18"/>
+    <circle cx="723" cy="255" r="1" opacity="0.18"/>
+    <circle cx="747" cy="253" r="1" opacity="0.18"/>
+    <circle cx="753" cy="252" r="1" opacity="0.18"/>
+    <circle cx="777" cy="255" r="1" opacity="0.18"/>
+    <circle cx="783" cy="252" r="1" opacity="0.18"/>
+    <circle cx="807" cy="253" r="1" opacity="0.18"/>
+    <circle cx="823" cy="255" r="1" opacity="0.18"/>
+    <circle cx="847" cy="252" r="1" opacity="0.18"/>
+    <!-- Extra scatter below -->
+    <circle cx="585" cy="270" r="0.7" opacity="0.12"/>
+    <circle cx="592" cy="268" r="0.7" opacity="0.12"/>
+    <circle cx="620" cy="272" r="0.7" opacity="0.12"/>
+    <circle cx="640" cy="269" r="0.7" opacity="0.12"/>
+    <circle cx="660" cy="271" r="0.7" opacity="0.12"/>
+    <circle cx="690" cy="268" r="0.7" opacity="0.12"/>
+    <circle cx="700" cy="272" r="0.7" opacity="0.12"/>
+    <circle cx="725" cy="270" r="0.7" opacity="0.12"/>
+    <circle cx="750" cy="268" r="0.7" opacity="0.12"/>
+    <circle cx="780" cy="271" r="0.7" opacity="0.12"/>
+    <circle cx="810" cy="269" r="0.7" opacity="0.12"/>
+    <circle cx="850" cy="270" r="0.7" opacity="0.12"/>
+  </g>
+</svg>

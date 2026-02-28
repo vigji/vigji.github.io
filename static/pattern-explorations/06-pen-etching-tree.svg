@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <!-- Pen-etching style branching tree, like a phylogenetic tree or river delta -->
+  <g fill="none" stroke="#8a8078" stroke-linecap="round">
+    <!-- Main trunk -->
+    <path d="M720,420 Q718,380 715,340 Q712,300 710,260 Q708,220 710,180 Q712,140 715,100 Q718,60 720,30" stroke-width="1.2" opacity="0.45"/>
+    <!-- Primary branches -->
+    <path d="M710,260 Q690,240 665,225 Q640,210 610,200 Q580,192 550,188" stroke-width="0.9" opacity="0.4"/>
+    <path d="M710,260 Q735,240 760,228 Q785,218 810,212 Q835,208 855,205" stroke-width="0.9" opacity="0.4"/>
+    <path d="M715,160 Q695,145 672,135 Q650,128 625,125" stroke-width="0.8" opacity="0.35"/>
+    <path d="M715,160 Q740,148 765,140 Q790,135 815,132" stroke-width="0.8" opacity="0.35"/>
+    <path d="M715,340 Q690,335 665,328 Q640,322 615,318" stroke-width="0.8" opacity="0.35"/>
+    <path d="M715,340 Q745,338 770,335 Q800,332 825,328" stroke-width="0.8" opacity="0.35"/>
+    <!-- Secondary branches -->
+    <path d="M665,225 Q650,215 632,210 Q615,205 598,198" stroke-width="0.5" opacity="0.3"/>
+    <path d="M665,225 Q660,240 652,252 Q645,265 638,275" stroke-width="0.5" opacity="0.3"/>
+    <path d="M760,228 Q775,220 792,215" stroke-width="0.5" opacity="0.3"/>
+    <path d="M760,228 Q762,245 768,260" stroke-width="0.5" opacity="0.3"/>
+    <path d="M672,135 Q660,128 648,122" stroke-width="0.5" opacity="0.28"/>
+    <path d="M672,135 Q668,148 662,158" stroke-width="0.5" opacity="0.28"/>
+    <path d="M765,140 Q778,135 790,128" stroke-width="0.5" opacity="0.28"/>
+    <path d="M665,328 Q652,325 638,320" stroke-width="0.5" opacity="0.28"/>
+    <path d="M770,335 Q785,332 798,328" stroke-width="0.5" opacity="0.28"/>
+    <!-- Tertiary twigs -->
+    <path d="M598,198 Q585,192 572,190" stroke-width="0.35" opacity="0.2"/>
+    <path d="M638,275 Q630,282 625,292" stroke-width="0.35" opacity="0.2"/>
+    <path d="M792,215 Q805,210 815,205" stroke-width="0.35" opacity="0.2"/>
+    <path d="M648,122 Q638,118 628,116" stroke-width="0.35" opacity="0.2"/>
+    <path d="M790,128 Q800,124 810,120" stroke-width="0.35" opacity="0.2"/>
+    <!-- Cross-hatching on trunk for etching effect -->
+    <line x1="705" y1="100" x2="725" y2="95" stroke-width="0.3" opacity="0.2"/>
+    <line x1="706" y1="130" x2="724" y2="125" stroke-width="0.3" opacity="0.2"/>
+    <line x1="707" y1="160" x2="723" y2="155" stroke-width="0.3" opacity="0.22"/>
+    <line x1="706" y1="190" x2="724" y2="185" stroke-width="0.3" opacity="0.22"/>
+    <line x1="705" y1="220" x2="725" y2="215" stroke-width="0.3" opacity="0.22"/>
+    <line x1="706" y1="250" x2="724" y2="245" stroke-width="0.3" opacity="0.2"/>
+    <line x1="707" y1="280" x2="723" y2="275" stroke-width="0.3" opacity="0.2"/>
+    <line x1="708" y1="310" x2="722" y2="305" stroke-width="0.3" opacity="0.18"/>
+    <line x1="709" y1="340" x2="721" y2="335" stroke-width="0.3" opacity="0.18"/>
+    <line x1="711" y1="370" x2="719" y2="365" stroke-width="0.3" opacity="0.15"/>
+    <line x1="713" y1="400" x2="717" y2="395" stroke-width="0.3" opacity="0.12"/>
+    <!-- Terminal dots at branch tips -->
+    <circle cx="550" cy="188" r="1.5" fill="#8a8078" opacity="0.3"/>
+    <circle cx="855" cy="205" r="1.5" fill="#8a8078" opacity="0.3"/>
+    <circle cx="625" cy="125" r="1.2" fill="#8a8078" opacity="0.25"/>
+    <circle cx="815" cy="132" r="1.2" fill="#8a8078" opacity="0.25"/>
+    <circle cx="615" cy="318" r="1.2" fill="#8a8078" opacity="0.25"/>
+    <circle cx="825" cy="328" r="1.2" fill="#8a8078" opacity="0.25"/>
+    <circle cx="572" cy="190" r="1" fill="#8a8078" opacity="0.18"/>
+    <circle cx="625" cy="292" r="1" fill="#8a8078" opacity="0.18"/>
+    <circle cx="628" cy="116" r="1" fill="#8a8078" opacity="0.18"/>
+    <circle cx="810" cy="120" r="1" fill="#8a8078" opacity="0.18"/>
+  </g>
+</svg>
