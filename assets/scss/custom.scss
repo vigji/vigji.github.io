@@ -172,6 +172,26 @@ nav {
     font-family: $serif;
 }
 
+// --- Sidenote numbers: superscript style ---
+
+label.sidenote-number {
+    top: 0;
+    left: 0;
+
+    sup {
+        font-size: 0.75rem;
+        color: $link;
+    }
+}
+
+span.sidenote-number {
+    sup {
+        font-size: 0.75rem;
+        color: $link;
+        margin-right: 0.3rem;
+    }
+}
+
 // --- Code blocks ---
 
 pre,
