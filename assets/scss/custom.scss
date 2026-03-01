@@ -172,6 +172,10 @@ nav {
     font-family: $serif;
 }
 
+.marginnote img {
+    width: 70%;
+}
+
 // --- Sidenote numbers: superscript style ---
 
 label.sidenote-number {
@@ -266,15 +270,14 @@ time {
 
 // --- Article hero image ---
 
-figure.hero-img {
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+article figure.hero-img {
+    max-width: 55%;
+    width: 55%;
 
     img {
-        width: 100%;
-        height: auto;
+        width: 65%;
+        display: block;
+        margin: 0 auto;
     }
 }
 
