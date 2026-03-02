@@ -15,7 +15,7 @@ disableKinds = ["taxonomy", "term"]
     guessSyntax = true
 
 [params]
-  subtitle = "Data scientist & AI engineer"
+  subtitle = ""
   codeblocksdark = false
   marginNoteInd = "⊕"
   showPoweredBy = false
@@ -26,6 +26,8 @@ disableKinds = ["taxonomy", "term"]
   centerArticle = false
   github = "vigji"
   mastodon = "mastodon.social/@vigji"
+  bluesky = "vigji.bsky.social"
+  email = "luigi.petrucco@gmail.com"
   google_scholar = "FQDeRWQAAAAJ"
 
 [taxonomies]

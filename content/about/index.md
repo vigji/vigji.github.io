@@ -3,9 +3,9 @@ title: "About"
 description: "Bio, CV, and links."
 ---
 
-Data scientist and AI engineer at [Afliant](https://afliant.com). Previously a neuroscience researcher — I did my PhD in Munich under [Ruben Portugues](http://www.portugueslab.com), describing for the first time a [circuit for heading direction integration](https://www.biorxiv.org/content/10.1101/2022.04.27.489672.full.pdf) in the larval zebrafish brain ([thesis](https://edoc.ub.uni-muenchen.de/31211/)), and then a postdoc at the [Iurilli lab](https://armeniseharvard.org/scientists/giuliano-iurilli) at IIT, investigating the neural bases of intelligent behavior in the rodent brain.
+Data scientist and AI engineer at [Afliant](https://afliant.com). Previously a neuroscience researcher — I did my PhD in Munich under [Ruben Portugues](http://www.portugueslab.com), describing for the first time a [circuit for heading direction integration](https://www.biorxiv.org/content/10.1101/2022.04.27.489672.full.pdf) in the larval zebrafish brain ([thesis](https://edoc.ub.uni-muenchen.de/31211/)), and then a postdoc at the [Iurilli lab](https://armeniseharvard.org/scientists/giuliano-iurilli) at IIT, investigating the neural bases of hunting behavior in the rodent brain.
 
-I build things with Python, think about brains, and occasionally write about it.
+Here are some of my talks and projects:
 
 ---
 
@@ -31,13 +31,13 @@ I build things with Python, think about brains, and occasionally write about it.
 
 ## CV
 
-- [Short CV](/cv.pdf)
-- [Long CV](/cv_long.pdf)
-
+- [CV](/cv.pdf)
 ---
 
 ## Elsewhere
 
 - [GitHub](https://github.com/vigji)
+- [Bluesky](https://bsky.app/profile/vigji.bsky.social)
 - [Mastodon](https://mastodon.social/@vigji)
 - [Google Scholar](https://scholar.google.it/citations?user=FQDeRWQAAAAJ)
+- [Email](mailto:luigi.petrucco@gmail.com)

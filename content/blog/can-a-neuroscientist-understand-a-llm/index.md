@@ -2,7 +2,7 @@
 title: "Can a neuroscientist understand a LLM"
 subtitle: "Or: a very late critique to a eight years old argument"
 date: 2026-02-26
-draft: false
+draft: true
 description: "On microprocessors, brains, and neural networks — and why neuroscience tools work better on some than others."
 ---
 

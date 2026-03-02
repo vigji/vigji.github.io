@@ -2,7 +2,7 @@
 title: "Hello, World"
 date: 2026-02-26
 description: "A first post, and a test of Tufte-style typography."
-draft: false
+draft: true
 ---
 
 {{< epigraph author="Edward Tufte" cite="The Visual Display of Quantitative Information" >}}

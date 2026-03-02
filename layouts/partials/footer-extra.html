@@ -1,15 +1,14 @@
-{{/* Buttondown subscribe form — only show on blog pages */}}
-{{ if eq .Section "blog" }}
+{{/* Mailchimp subscribe form — disabled until configured */}}
+{{ if false }}
 <div class="subscribe-form">
   <p>Subscribe for new posts</p>
   <form
-    action="https://buttondown.com/api/emails/newsletter-subscribe"
+    action="https://XXXXX.us1.list-manage.com/subscribe/post?u=AAAAA&amp;id=BBBBB"
     method="post"
-    target="popupwindow"
+    target="_blank"
   >
-    {{/* Replace YOURNAME with your Buttondown username after creating an account at https://buttondown.com */}}
-    <input type="hidden" name="tag" value="YOURNAME" />
-    <input type="email" name="email" placeholder="your@email.com" required />
+    <input type="email" name="EMAIL" placeholder="your@email.com" required />
+    <input type="hidden" name="b_AAAAA_BBBBB" value="" />
     <input type="submit" value="Subscribe" />
   </form>
 </div>

@@ -20,6 +20,12 @@
   {{ if isset .Site.Params "mastodon" }}
   <li><a href="https://{{.Site.Params.mastodon}}">Mastodon</a></li>
   {{ end }}
+  {{ if isset .Site.Params "bluesky" }}
+  <li><a href="https://bsky.app/profile/{{.Site.Params.bluesky}}">Bluesky</a></li>
+  {{ end }}
+  {{ if isset .Site.Params "email" }}
+  <li><a href="mailto:{{.Site.Params.email}}">Email</a></li>
+  {{ end }}
   {{ if isset .Site.Params "google_scholar" }}
   <li><a href="https://scholar.google.com/citations?user={{.Site.Params.google_scholar}}">Google Scholar</a></li>
   {{ end }}
