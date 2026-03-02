@@ -10,7 +10,7 @@
 // Apply theme before paint to avoid flash
 (function() {
   var s = localStorage.getItem('theme');
-  if (s === 'dark' || (!s && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  if (s === 'dark') {
     document.documentElement.classList.add('dark');
   }
 })();
