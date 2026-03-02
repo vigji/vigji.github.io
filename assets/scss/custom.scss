@@ -245,7 +245,7 @@ time {
 .post-description {
     font-family: $serif;
     font-style: italic;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     color: $sidenote;
     margin-top: -0.3rem;
     margin-bottom: 0.8rem;
@@ -257,12 +257,12 @@ time {
     margin-bottom: 2rem;
 
     time {
-        font-size: 0.9rem;
+        font-size: 1rem;
         display: block;
     }
 
     .post-reading-time {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         display: block;
         margin-top: 0.15rem;
     }
@@ -306,6 +306,23 @@ article figure.closing-img {
         display: block;
         margin: 0 auto;
     }
+}
+
+// --- KaTeX math styling ---
+
+.katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+article .katex {
+    font-size: 0.95em;
+}
+
+article .katex-display .katex {
+    font-size: 1.1em;
 }
 
 // --- Article typography ---
