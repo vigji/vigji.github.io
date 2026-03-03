@@ -9,11 +9,11 @@
     <ul class="blog-list">
       {{ range .Pages }}
       <li>
-        <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
         <a class="post-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
         {{ with .Description }}
         <p class="post-summary">{{ . }}</p>
         {{ end }}
+        <span class="post-date">{{ .Date.Format "January 2, 2006" }}</span>
       </li>
       {{ end }}
     </ul>

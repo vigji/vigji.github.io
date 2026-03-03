@@ -53,6 +53,13 @@ $sans:  "Libertinus Sans", "Linux Biolinum", "Gill Sans", "Gill Sans MT",
         Calibri, sans-serif;
 $mono:  Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
+// Override ET Book old-style numeral class with Libertinus onum feature
+.numeral {
+    font-family: $serif;
+    font-variant-numeric: oldstyle-nums;
+    font-feature-settings: "onum";
+}
+
 // --- Color palette ---
 
 $bg:          #fefcf8;
@@ -382,6 +389,7 @@ article {
 
     li {
         margin-bottom: 0.5rem;
+        font-size: 1.5rem;
     }
 
     .post-date {
@@ -403,19 +411,24 @@ article {
     }
 
     .post-title {
-        font-size: 1.15rem;
+        font-size: 1.5rem;
     }
 
     .post-date {
+        display: block;
         font-family: $sans;
         color: $meta;
         font-size: 0.8rem;
+        margin-top: 0.2rem;
     }
 
     .post-summary {
         color: $sidenote;
         font-size: 0.9rem;
         margin-top: 0.25rem;
+        margin-bottom: 0.1rem;
+        width: 100%;
+        hyphens: none;
     }
 }
 
@@ -557,7 +570,7 @@ article {
     color: $meta;
 
     &::after {
-        content: "☀";
+        content: "☀\FE0E";
     }
 }
 
@@ -609,7 +622,7 @@ html.dark {
         color: $dark-meta;
 
         &::after {
-            content: "☽";
+            content: "☽\FE0E";
         }
     }
 

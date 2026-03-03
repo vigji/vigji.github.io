@@ -36,17 +36,17 @@ disableKinds = ["taxonomy", "term"]
 
 [menu]
   [[menu.nav]]
-    name = "Home"
+    name = "home"
     weight = -110
     identifier = "home"
     url = "/"
   [[menu.nav]]
-    name = "Blog"
+    name = "blog"
     weight = -100
     identifier = "blog"
     url = "/blog/"
   [[menu.nav]]
-    name = "About"
+    name = "about"
     weight = -90
     identifier = "about"
     url = "/about/"
