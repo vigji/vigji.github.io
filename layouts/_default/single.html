@@ -4,6 +4,6 @@
 
   <section>{{ .Content }}</section>
 
-  {{ partial "footer.html" . }}
+  {{ if not .Params.no_subscribe }}{{ partial "footer.html" . }}{{ end }}
 </article>
 {{ end }}
