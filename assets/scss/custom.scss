@@ -516,11 +516,44 @@ article {
     padding-top: 1.5rem;
     border-top: 1px solid $rule;
 
+    // AWeber structural reset — flatten nested divs into a flex row
+    .af-form-wrapper,
+    .af-form { display: contents; }
+
+    .af-body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0;
+    }
+
+    .af-element {
+        margin: 0;
+        padding: 0;
+    }
+
+    .af-textWrap { display: contents; }
+    .af-clear    { display: none; }
+
+    .buttonContainer { padding: 0; }
+
+    .privacyPolicy {
+        width: 100%;
+        p { margin: 0; }
+        a {
+            font-family: $sans;
+            font-size: 0.72rem;
+            color: $meta;
+        }
+    }
+
     p {
         font-family: $sans;
         font-variant: small-caps;
         letter-spacing: 0.05em;
         color: $meta;
+        width: 100%;
     }
 
     input[type="email"] {
@@ -531,6 +564,86 @@ article {
         background: $bg;
         width: 16rem;
         max-width: 100%;
+        // override AWeber !important rules
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        font-family: $sans;
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+        background: $link;
+        color: $bg;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background: $link-hover;
+        }
+    }
+}
+
+// --- End-of-post subscribe block ---
+
+.post-subscribe {
+    margin-top: 3rem;
+    padding: 1.5rem 2rem;
+    background: color-mix(in srgb, #{$link} 5%, #{$bg});
+    border-left: 3px solid $link;
+
+    h3 {
+        font-family: $sans;
+        font-variant: small-caps;
+        letter-spacing: 0.05em;
+        font-size: 1rem;
+        margin: 0 0 0.5rem 0;
+        color: $link;
+    }
+
+    p {
+        font-family: $sans;
+        font-size: 0.95rem;
+        color: $meta;
+        margin: 0 0 1rem 0;
+    }
+
+    // AWeber structural reset
+    .af-form-wrapper,
+    .af-form { display: contents; }
+
+    .af-body {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0;
+        margin-top: 0.75rem;
+    }
+
+    .af-element { margin: 0; padding: 0; }
+    .af-textWrap { display: contents; }
+    .af-clear    { display: none; }
+    .buttonContainer { padding: 0; }
+
+    .privacyPolicy {
+        width: 100%;
+        p { margin: 0; }
+        a {
+            font-family: $sans;
+            font-size: 0.72rem;
+            color: $meta;
+        }
+    }
+
+    input[type="email"] {
+        font-family: $sans;
+        font-size: 0.9rem;
+        padding: 0.4rem 0.6rem;
+        border: 1px solid $rule;
+        background: $bg;
+        width: 16rem;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     input[type="submit"] {
@@ -708,6 +821,42 @@ html.dark {
         border-top-color: $dark-rule;
 
         p {
+            color: $dark-meta;
+        }
+
+        .privacyPolicy a {
+            color: $dark-meta;
+        }
+
+        input[type="email"] {
+            border-color: $dark-rule;
+            background: $dark-code-bg;
+            color: $dark-text;
+        }
+
+        input[type="submit"] {
+            background: $dark-link;
+            color: $dark-bg;
+
+            &:hover {
+                background: $dark-link-hover;
+            }
+        }
+    }
+
+    .post-subscribe {
+        background: color-mix(in srgb, #{$dark-link} 8%, #{$dark-bg});
+        border-left-color: $dark-link;
+
+        h3 {
+            color: $dark-link;
+        }
+
+        p {
+            color: $dark-meta;
+        }
+
+        .privacyPolicy a {
             color: $dark-meta;
         }
 

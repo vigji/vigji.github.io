@@ -11,6 +11,11 @@
     {{ .Content }}
   </section>
 
+  <div class="post-subscribe">
+    <h3>Enjoyed this?</h3>
+    <p>Subscribe to get new articles in your inbox.</p>
+    {{ partial "aweber-form.html" . }}
+  </div>
 
 </article>
 {{ end }}

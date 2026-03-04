@@ -1,15 +1,4 @@
-{{/* Mailchimp subscribe form — disabled until configured */}}
-{{ if false }}
 <div class="subscribe-form">
-  <p>Subscribe for new posts</p>
-  <form
-    action="https://XXXXX.us1.list-manage.com/subscribe/post?u=AAAAA&amp;id=BBBBB"
-    method="post"
-    target="_blank"
-  >
-    <input type="email" name="EMAIL" placeholder="your@email.com" required />
-    <input type="hidden" name="b_AAAAA_BBBBB" value="" />
-    <input type="submit" value="Subscribe" />
-  </form>
+  <p>Get new posts by email</p>
+  {{ partial "aweber-form.html" . }}
 </div>
-{{ end }}
