@@ -1,4 +1,6 @@
+{{ if not .Params.no_subscribe }}
 <div class="subscribe-form">
   <p>Get new posts by email</p>
   {{ partial "aweber-form.html" . }}
 </div>
+{{ end }}
