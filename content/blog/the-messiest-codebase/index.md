@@ -2,7 +2,7 @@
 title: "The Messiest Codebase in the Universe (so far)"
 date: 2026-02-25
 draft: false
-description: "On the tension between readability and evolvability."
+description: "How I learned to stop worrying and love vibecoding."
 ---
 
 {{< figure src="waddington-landscape.svg" alt="Waddington's epigenetic landscape" class="hero-img" >}}
