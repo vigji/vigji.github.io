@@ -3,6 +3,7 @@ title: "The Messiest Codebase in the Universe (so far)"
 date: 2026-02-25
 draft: false
 description: "How I learned to stop worrying and love vibecoding."
+image: "waddington-landscape.svg"
 ---
 
 {{< figure src="waddington-landscape.svg" alt="Waddington's epigenetic landscape" class="hero-img" >}}

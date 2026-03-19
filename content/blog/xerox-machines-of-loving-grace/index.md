@@ -3,6 +3,7 @@ title: "Xerox Machines of Loving Grace"
 date: 2026-03-18
 draft: false
 description: "On xerocoding, the new vibecoding."
+image: "escher-sky-water.png"
 ---
 
 {{< figure src="escher-sky-water.png" alt="Escher's Sky and Water" class="hero-img" >}}

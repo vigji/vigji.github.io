@@ -15,7 +15,10 @@ disableKinds = ["taxonomy", "term"]
     guessSyntax = true
 
 [params]
-  subtitle = ""
+  subtitle = "Data, cells, brains, and code"
+  author = "Luigi Petrucco"
+  description = "Personal site of Luigi Petrucco — data scientist, AI engineer, and former neuroscientist. Writing about data, cells, brains, and code."
+  defaultImage = "/images/og-default.png"
   codeblocksdark = false
   marginNoteInd = "⊕"
   showPoweredBy = false
@@ -52,10 +55,20 @@ disableKinds = ["taxonomy", "term"]
     url = "/about/"
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML", "RSS", "LLMS", "LLMSFull"]
   section = ["HTML", "RSS"]
 
 [outputFormats]
   [outputFormats.RSS]
     mediaType = "application/rss+xml"
     baseName = "feed"
+  [outputFormats.LLMS]
+    mediaType = "text/plain"
+    baseName = "llms"
+    isPlainText = true
+    notAlternative = true
+  [outputFormats.LLMSFull]
+    mediaType = "text/plain"
+    baseName = "llms-full"
+    isPlainText = true
+    notAlternative = true

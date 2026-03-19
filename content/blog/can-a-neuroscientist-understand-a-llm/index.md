@@ -3,6 +3,7 @@ title: "Can a Neuroscientist Understand an LLM?"
 date: 2025-03-15
 draft: false
 description: "Or a microprocessor. Or a brain. Or none?"
+image: "waddington-llm.png"
 ---
 
 {{< figure src="waddington-llm.png" alt="Waddington-style landscape with neural network connections" class="hero-img" >}}

@@ -1,0 +1,10 @@
+# {{ .Site.Title }}
+
+> {{ .Site.Params.description }}
+
+{{ with .Site.GetPage "/about" }}{{ .Plain }}{{ end }}
+
+## Blog Posts
+
+{{ range where .Site.RegularPages "Section" "blog" }}{{ if not .Draft }}- [{{ .Title }}]({{ .Permalink }}): {{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}
+{{ end }}{{ end }}

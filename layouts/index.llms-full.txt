@@ -1,0 +1,24 @@
+# {{ .Site.Title }}
+
+> {{ .Site.Params.description }}
+
+---
+
+## About
+
+{{ with .Site.GetPage "/about" }}{{ .Plain }}{{ end }}
+
+---
+
+## Blog Posts
+
+{{ range where .Site.RegularPages "Section" "blog" }}{{ if not .Draft }}
+### {{ .Title }}
+
+Date: {{ .Date.Format "2006-01-02" }}
+URL: {{ .Permalink }}
+
+{{ .Plain }}
+
+---
+{{ end }}{{ end }}
