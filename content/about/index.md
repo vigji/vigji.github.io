@@ -22,20 +22,13 @@ Here are some of my talks and projects:
 ## Teaching
 
 - [Python for (open) Neuroscience](https://github.com/vigji/python-cimec): Python crash course for the Graduate School in Neuroscience at the University of Trento — teaching material, exercises, and lecture recordings on GitHub
-
-## Notes
-
 - [Lecture notes](/comp_neuro_notes.pdf) for the course *Modelling of Cellular Physiology* by Prof. Christian Leibold at LMU Munich
 
 ---
 
-## CV
-
-- [CV](/cv.pdf)
----
-
 ## Elsewhere
 
+- [CV](/cv.pdf)
 - [GitHub](https://github.com/vigji)
 - [Bluesky](https://bsky.app/profile/vigji.bsky.social)
 - [Mastodon](https://mastodon.social/@vigji)

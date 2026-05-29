@@ -11,6 +11,18 @@
     {{ .Content }}
   </section>
 
+  {{ $older := .PrevInSection }}{{ $newer := .NextInSection }}
+  {{ if or $older $newer }}
+  <nav class="post-nav">
+    <div class="previous-post">
+      {{ with $older }}<a href="{{ .RelPermalink }}"><span class="post-nav-dir">← Previous</span><span class="post-nav-title">{{ .Title }}</span></a>{{ end }}
+    </div>
+    <div class="next-post">
+      {{ with $newer }}<a href="{{ .RelPermalink }}"><span class="post-nav-dir">Next →</span><span class="post-nav-title">{{ .Title }}</span></a>{{ end }}
+    </div>
+  </nav>
+  {{ end }}
+
   <div class="post-subscribe">
     <h3>Enjoyed this?</h3>
     <p>Subscribe to get new articles in your inbox.</p>

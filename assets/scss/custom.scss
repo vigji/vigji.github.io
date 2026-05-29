@@ -111,12 +111,13 @@ h1 {
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 1.85rem;
     font-style: normal;
 }
 
 h3 {
-    font-size: 1.2rem;
+    // must stay clearly larger than article body text (1.35rem) so subsections read as headers
+    font-size: 1.5rem;
     font-style: normal;
 }
 
@@ -348,6 +349,47 @@ article {
     }
 }
 
+// --- Full-width lists (match the text column, not Tufte's narrow 45%) ---
+// Usage: wrap a markdown list between {{< div class="list-wide" >}} … {{< div "end" >}}
+
+.list-wide ul,
+.list-wide ol {
+    width: 55%;
+    box-sizing: border-box;
+    -webkit-padding-start: 1.6rem;
+    -webkit-padding-end: 0;
+    padding-inline-start: 1.6rem;
+    padding-inline-end: 0;
+}
+
+// --- Prompt / transcript boxes (LW-style framed quote) ---
+// Usage: wrap content between {{< promptbox >}} … {{< /promptbox >}}
+
+.promptbox {
+    width: 55%;
+    box-sizing: border-box;
+    margin: 1.6rem 0;
+    padding: 0.9rem 1.3rem;
+    background: color-mix(in srgb, #{$link} 4%, #{$bg});
+    border-left: 3px solid color-mix(in srgb, #{$link} 45%, #{$rule});
+    border-radius: 2px;
+
+    p {
+        width: 100%;
+        font-size: 1.12rem;
+        line-height: 1.5;
+        margin: 0 0 0.7rem 0;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+
+    em {
+        color: $sidenote;
+    }
+}
+
 // --- Homepage styles ---
 
 .home-bio {
@@ -495,18 +537,60 @@ article {
     }
 }
 
+// --- Previous / next post navigation ---
+
+.post-nav {
+    width: 55%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 3rem 0 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid $rule;
+}
+
 .previous-post,
 .next-post {
     font-family: $sans;
     font-size: 1rem;
+    max-width: 48%;
 
     a {
         color: $meta;
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
 
         &:hover {
             color: $link-hover;
+            text-decoration: none;
+
+            .post-nav-title {
+                text-decoration: underline;
+            }
         }
     }
+
+    .post-nav-dir {
+        font-variant: small-caps;
+        letter-spacing: 0.05em;
+        font-size: 0.8rem;
+        color: $meta;
+    }
+
+    .post-nav-title {
+        font-size: 1.05rem;
+        color: $link;
+        line-height: 1.25;
+    }
+}
+
+.next-post {
+    text-align: right;
+    margin-left: auto;
+
+    a { align-items: flex-end; }
 }
 
 // --- Subscribe form ---
@@ -784,6 +868,16 @@ html.dark {
         }
     }
 
+    .post-nav {
+        border-top-color: $dark-rule;
+    }
+
+    .previous-post,
+    .next-post {
+        .post-nav-dir { color: $dark-meta; }
+        .post-nav-title { color: $dark-link; }
+    }
+
     .previous-post a,
     .next-post a {
         color: $dark-meta;
@@ -844,6 +938,15 @@ html.dark {
         }
     }
 
+    .promptbox {
+        background: color-mix(in srgb, #{$dark-link} 8%, #{$dark-bg});
+        border-left-color: color-mix(in srgb, #{$dark-link} 55%, #{$dark-rule});
+
+        em {
+            color: $dark-sidenote;
+        }
+    }
+
     .post-subscribe {
         background: color-mix(in srgb, #{$dark-link} 8%, #{$dark-bg});
         border-left-color: $dark-link;
@@ -882,6 +985,13 @@ html.dark {
 
     article > figure img {
         filter: invert(0.85) brightness(0.8);
+    }
+
+    // Hero is a monochrome alpha cutout nested in <section>, so the rule above
+    // (direct-child only) misses it — invert it explicitly so dark ink reads
+    // as light ink on the dark page, alpha showing the background through.
+    article .hero-img img {
+        filter: invert(0.92) brightness(1.05);
     }
 
     #cookie-banner {

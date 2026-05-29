@@ -1,0 +1,4 @@
+{{- /* Boxed quote for model prompts / transcript excerpts (LW-style framed quote). */ -}}
+<div class="promptbox"{{ with .Get "label" }} data-label="{{ . }}"{{ end }}>
+{{ .Inner | $.Page.RenderString (dict "display" "block") }}
+</div>
