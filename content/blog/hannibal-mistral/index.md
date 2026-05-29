@@ -3,10 +3,10 @@ title: "Hannibal Mistral: the Mistral Family Has a Problem"
 date: 2026-05-29
 draft: false
 description: "naïve persona prompts trivially jailbreak the whole Mistral family."
-image: "goya-carnival-card.png"
+image: "share-card.png"
 ---
 
-{{< figure src="goya-carnival.png" alt="Francisco Goya, Disparate de Carnaval (Carnival Folly), c. 1816" class="hero-img" >}}
+{{< figure src="goya-carnival.png" alt="Francisco Goya, Disparate de Carnaval (Carnival Folly), c. 1816" class="hero-img hero-fill" >}}
 
 ## TL;DR
 

@@ -303,6 +303,13 @@ article figure.hero-img {
     }
 }
 
+// Hero variant whose artwork fills the full text column (img edge-to-edge)
+article figure.hero-fill {
+    img {
+        width: 100%;
+    }
+}
+
 // --- Article closing image ---
 
 article figure.closing-img {
