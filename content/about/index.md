@@ -3,11 +3,20 @@ title: "About"
 description: "Bio, CV, and links."
 ---
 
-Data scientist and AI engineer at [Afliant](https://afliant.com). Previously a neuroscience researcher — I did my PhD in Munich under [Ruben Portugues](http://www.portugueslab.com), describing for the first time a [circuit for heading direction integration](https://www.biorxiv.org/content/10.1101/2022.04.27.489672.full.pdf) in the larval zebrafish brain ([thesis](https://edoc.ub.uni-muenchen.de/31211/)), and then a postdoc at the [Iurilli lab](https://armeniseharvard.org/scientists/giuliano-iurilli) at IIT, investigating the neural bases of hunting behavior in the rodent brain.
+Data scientist and AI engineer at [Afliant](https://afliant.com). Part-time AI alignment researcher, working on the behavior of language models: chain of thought, elicitation, and red-teaming.
+
+Previously a neuroscience researcher — I did my PhD in Munich under [Ruben Portugues](http://www.portugueslab.com), describing for the first time a [circuit for heading direction integration](https://www.biorxiv.org/content/10.1101/2022.04.27.489672.full.pdf) in the larval zebrafish brain ([thesis](https://edoc.ub.uni-muenchen.de/31211/)), and then a postdoc at the [Iurilli lab](https://armeniseharvard.org/scientists/giuliano-iurilli) at IIT, investigating the neural bases of hunting behavior in the rodent brain.
 
 Here are some of my talks and projects:
 
 ---
+
+## AI alignment
+
+- [ARENA 9.0](https://www.arena.education/), Alignment Research Engineer Accelerator, London (Oct 2026)
+- [Leaking Muse's Charter, Meta's model spec](/blog/muse-spark-charter/): reconstructing Muse Spark Open's model spec from its chain of thought ([explorer](https://vigji.github.io/muse-spark-open-charter/))
+- [Hannibal Mistral](/blog/hannibal-mistral/): persona-conditioned elicitation in the Mistral model family
+- Red-teaming leaderboards: top 30 on the JudgmentDay arena (AIM Intelligence), top 50 in the Gray Swan indirect prompt-injection challenge
 
 ## Talks
 

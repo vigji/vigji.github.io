@@ -17,7 +17,7 @@ disableKinds = ["taxonomy", "term"]
 [params]
   subtitle = "Data, cells, brains, and code"
   author = "Luigi Petrucco"
-  description = "Personal site of Luigi Petrucco — data scientist, AI engineer, and former neuroscientist. Writing about data, cells, brains, and code."
+  description = "Personal site of Luigi Petrucco — data scientist, AI engineer, part-time AI alignment researcher, and former neuroscientist. Writing about the neuroscience of brains and AI models."
   defaultImage = "/images/og-default.png"
   codeblocksdark = false
   marginNoteInd = "⊕"
